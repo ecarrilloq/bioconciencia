@@ -25,7 +25,7 @@ SECRET_KEY = '(d$i3fv%^4$h)9ho_&0$k!n)x6955r$6irc=0m8%@t#9#q=@t_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['bioconciencia.pythonanywhere.com']
 
 
 # Application definition
@@ -77,16 +77,16 @@ WSGI_APPLICATION = 'miproyecto.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = { 
+DATABASES = {
     'default': {
-         #'ENGINE': 'django.db.backends.mysql', 
-         'ENGINE': 'mysql.connector.django', 
-         'NAME': 'bioconciencia', 
-         'USER': 'root', 
-         'PASSWORD': 'root', 
-         'HOST': 'localhost',
-         'PORT': '3306', 
-         } 
+         'ENGINE': 'django.db.backends.mysql',
+         #'ENGINE': 'mysql.connector.django',
+         'NAME': 'bioconciencia$default',
+         'USER': 'bioconciencia',
+         'PASSWORD': 'bio201811$',
+         'HOST': 'bioconciencia.mysql.pythonanywhere-services.com',
+         'PORT': '3306',
+         }
          }
 
 
@@ -134,6 +134,6 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
      ),
      'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated', 
-    ), 
+        'rest_framework.permissions.IsAuthenticated',
+    ),
 }
